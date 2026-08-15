@@ -1,0 +1,96 @@
+import { MapPin } from 'lucide-react';
+
+const COUNTRIES = [
+  { flag: '🇮🇳', name: 'India', description: 'Nationwide presence with offline centers in Tamil Nadu.' },
+  { flag: '🇺🇸', name: 'USA', description: 'Centers serving South Asian communities across the United States.' },
+  { flag: '🇬🇧', name: 'United Kingdom', description: 'Programs available across major UK cities.' },
+  { flag: '🇦🇪', name: 'Dubai, UAE', description: 'Serving families in Dubai and across the UAE.' },
+];
+
+const OFFLINE_CENTERS = [
+  { name: 'Sulur', address: 'Sulur, Coimbatore District, Tamil Nadu, India' },
+  { name: 'Karanam Pettai', address: 'Karanam Pettai, Tamil Nadu, India' },
+];
+
+export default function Locations() {
+  return (
+    <section id="locations" className="py-20 md:py-28 bg-navy relative overflow-hidden">
+      <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-teal/5 blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-16">
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Global Reach</p>
+          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+            Where We Are
+          </h2>
+          <p className="mt-4 text-muted text-base md:text-lg max-w-xl mx-auto">
+            BrainIQ Academy is growing worldwide — bringing the benefits of abacus to children everywhere.
+          </p>
+        </div>
+
+        {/* Country cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12" style={{ perspective: '1000px' }}>
+          {COUNTRIES.map((country, i) => (
+            <a
+              key={country.name}
+              href="#contact"
+              className="group bg-card rounded-2xl p-6 text-center gold-border card-3d"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            >
+              <div
+                className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110 inline-block"
+                style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))' }}
+              >
+                {country.flag}
+              </div>
+              <h3 className="font-playfair text-lg font-bold text-text-primary mb-2 group-hover:text-gold transition-colors">
+                {country.name}
+              </h3>
+              <p className="text-muted text-sm leading-relaxed">{country.description}</p>
+              <p className="text-teal text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                Enquire →
+              </p>
+            </a>
+          ))}
+        </div>
+
+        {/* Offline centers — gold 3D card */}
+        <div
+          className="border-2 border-gold/50 rounded-2xl p-6 md:p-10 bg-card gold-glow"
+          style={{ transform: 'perspective(1000px) rotateX(1deg)', boxShadow: '0 20px 60px rgba(201,168,76,0.1), 0 8px 32px rgba(0,0,0,0.5)' }}
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center"
+              style={{ boxShadow: '0 0 20px rgba(201,168,76,0.3)' }}>
+              <MapPin className="text-gold" size={20} />
+            </div>
+            <h3 className="font-playfair text-2xl font-bold text-gold"
+              style={{ textShadow: '0 0 20px rgba(201,168,76,0.4)' }}>
+              Offline Centers — Tamil Nadu
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {OFFLINE_CENTERS.map((center) => (
+              <div
+                key={center.name}
+                className="flex items-start gap-4 bg-navy/70 rounded-xl p-5 border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1"
+                style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.3)' }}
+              >
+                <div className="w-2.5 h-2.5 rounded-full bg-teal mt-1.5 flex-shrink-0"
+                  style={{ boxShadow: '0 0 8px rgba(29,184,166,0.8)' }} />
+                <div>
+                  <p className="text-text-primary font-semibold text-lg">{center.name}</p>
+                  <p className="text-muted text-sm mt-1">{center.address}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-muted text-sm mt-6 text-center">
+            Walk-in welcome · Contact us for class schedules and timings
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
