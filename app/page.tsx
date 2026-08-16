@@ -10,10 +10,12 @@ import Franchise from '@/components/Franchise';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import SectionDivider from '@/components/SectionDivider';
+import MobileRedirect from '@/components/MobileRedirect';
 
 export default function Home() {
   return (
     <main>
+      <MobileRedirect />
       <Navbar />
       <Hero />
       <SectionDivider from="navy" to="card" />
