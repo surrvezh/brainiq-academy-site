@@ -27,9 +27,9 @@ export default function Home() {
       <SectionDivider from="navy" to="card" />
       <Locations />
       <SectionDivider from="card" to="navy" flip />
-      <Gallery />
-      <SectionDivider from="navy" to="card" />
       <ContactForm />
+      <SectionDivider from="navy" to="card" />
+      <Gallery />
       <SectionDivider from="card" to="navy" flip />
       <Franchise />
       <Footer />

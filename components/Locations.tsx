@@ -35,27 +35,24 @@ export default function Locations() {
         </div>
 
         {/* Country cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" style={{ perspective: '1000px' }}>
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mb-12" style={{ perspective: '1000px' }}>
           {COUNTRIES.map((country, i) => (
             <a
               key={country.name}
               href="#contact"
-              className="group bg-card rounded-2xl p-6 text-center gold-border card-3d"
+              className="group bg-card rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center gold-border card-3d"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div
-                className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110 inline-block"
+                className="text-3xl sm:text-5xl mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110 inline-block"
                 style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))' }}
               >
                 {country.flag}
               </div>
-              <h3 className="font-playfair text-lg font-bold text-text-primary mb-2 group-hover:text-gold transition-colors">
+              <h3 className="font-playfair text-xs sm:text-lg font-bold text-text-primary group-hover:text-gold transition-colors leading-tight">
                 {country.name}
               </h3>
-              <p className="text-muted text-sm leading-relaxed">{country.description}</p>
-              <p className="text-teal text-xs mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                Enquire →
-              </p>
+              <p className="hidden sm:block text-muted text-sm leading-relaxed mt-2">{country.description}</p>
             </a>
           ))}
         </div>

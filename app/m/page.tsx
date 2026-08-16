@@ -42,17 +42,19 @@ export default function MobilePage() {
 
       {/* Hero */}
       <section className="flex flex-col items-center text-center px-5 pt-10 pb-8 bg-navy">
-        <Image
-          src="/logo-full.png"
-          alt="BrainIQ Academy"
-          width={280}
-          height={158}
-          className="w-56 h-auto object-contain mb-6"
-          priority
-        />
+        <div className="animate-bounce-in" style={{ animationDelay: '0s' }}>
+          <Image
+            src="/logo-full.png"
+            alt="BrainIQ Academy"
+            width={280}
+            height={158}
+            className="w-56 h-auto object-contain mb-6"
+            priority
+          />
+        </div>
 
         {/* Stats */}
-        <div className="flex gap-6 justify-center mb-8">
+        <div className="flex gap-6 justify-center mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
           {[
             { num: '10,000+', label: 'Students' },
             { num: '6', label: 'Countries' },
@@ -66,21 +68,23 @@ export default function MobilePage() {
         </div>
 
         {/* Primary CTA */}
-        <a
-          href={WA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-xs flex items-center justify-center gap-2 py-4 bg-gold text-navy font-bold text-base rounded-full shadow-xl active:scale-95 transition-transform"
-        >
-          <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M11.99 0C5.366 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.057 23.714a.75.75 0 0 0 .917.918l5.947-1.458A11.945 11.945 0 0 0 11.99 24C18.614 24 24 18.627 24 12S18.614 0 11.99 0zm0 21.818a9.818 9.818 0 0 1-5.017-1.376l-.36-.214-3.726.913.944-3.631-.235-.374A9.79 9.79 0 0 1 2.182 12c0-5.414 4.4-9.818 9.808-9.818 5.407 0 9.828 4.404 9.828 9.818 0 5.415-4.421 9.818-9.828 9.818z"/>
-          </svg>
-          Enroll Now via WhatsApp
-        </a>
-        <a href="tel:+919629841966" className="mt-3 text-teal text-sm underline underline-offset-4">
-          or call +91 96298 41966
-        </a>
+        <div className="w-full flex flex-col items-center gap-3 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full max-w-xs flex items-center justify-center gap-2 py-4 bg-gold text-navy font-bold text-base rounded-full shadow-xl active:scale-95 transition-transform"
+          >
+            <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M11.99 0C5.366 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.057 23.714a.75.75 0 0 0 .917.918l5.947-1.458A11.945 11.945 0 0 0 11.99 24C18.614 24 24 18.627 24 12S18.614 0 11.99 0zm0 21.818a9.818 9.818 0 0 1-5.017-1.376l-.36-.214-3.726.913.944-3.631-.235-.374A9.79 9.79 0 0 1 2.182 12c0-5.414 4.4-9.818 9.808-9.818 5.407 0 9.828 4.404 9.828 9.818 0 5.415-4.421 9.818-9.828 9.818z"/>
+            </svg>
+            Enroll Now via WhatsApp
+          </a>
+          <a href="tel:+919629841966" className="text-teal text-sm underline underline-offset-4">
+            or call +91 96298 41966
+          </a>
+        </div>
       </section>
 
       <Divider />

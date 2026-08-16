@@ -54,29 +54,25 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {BENEFITS.map(({ icon: Icon, title, body }) => (
             <article
               key={title}
-              className="group bg-card rounded-2xl p-6 lg:p-8 gold-border card-3d cursor-default"
+              className="group bg-card rounded-2xl p-4 lg:p-8 gold-border card-3d cursor-default"
             >
-              {/* 3D icon container */}
               <div
-                className="w-14 h-14 rounded-2xl bg-teal/10 flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-teal/20"
+                className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-teal/10 flex items-center justify-center mb-3 sm:mb-5 transition-all duration-300 group-hover:bg-teal/20"
                 style={{ boxShadow: '0 4px 16px rgba(29,184,166,0.15), inset 0 1px 0 rgba(255,255,255,0.05)' }}
               >
-                <Icon className="text-teal" size={26} />
+                <Icon className="text-teal" size={20} />
               </div>
-
               <h3
-                className="font-playfair text-xl font-bold text-gold mb-3"
+                className="font-playfair text-sm sm:text-xl font-bold text-gold sm:mb-3 leading-snug"
                 style={{ textShadow: '0 0 16px rgba(201,168,76,0.3)' }}
               >
                 {title}
               </h3>
-              <p className="text-muted text-sm leading-relaxed">{body}</p>
-
-              {/* 3D bottom highlight */}
+              <p className="hidden sm:block text-muted text-sm leading-relaxed">{body}</p>
               <div className="mt-4 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </article>
           ))}

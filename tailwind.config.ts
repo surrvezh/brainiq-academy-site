@@ -26,6 +26,8 @@ const config: Config = {
         'spin-slow': 'spin 20s linear infinite',
         'pulse-gold': 'pulseGold 3s ease-in-out infinite',
         'orbit': 'orbit 12s linear infinite',
+        'bounce-in': 'bounceIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both',
+        'fade-up': 'fadeUp 0.5s ease-out both',
       },
       keyframes: {
         float: {
@@ -39,6 +41,14 @@ const config: Config = {
         orbit: {
           '0%': { transform: 'rotate(0deg) translateX(120px) rotate(0deg)' },
           '100%': { transform: 'rotate(360deg) translateX(120px) rotate(-360deg)' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.5) translateY(30px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       perspective: {
