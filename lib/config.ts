@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   siteUrl: 'https://brainiqacademy.com',
   // Replace with your number: country code + number, no + or spaces
   // Example: '919876543210' for India +91 98765 43210
-  whatsappNumber: 'YOUR_WHATSAPP_NUMBER',
+  whatsappNumber: '919629841966',
   get whatsappUrl() {
     return `https://wa.me/${this.whatsappNumber}`;
   },
@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
     youtube: 'https://youtube.com/@brainiqacademy',
   },
   contact: {
-    email: 'info@brainiqacademy.com',
+    email: 'smartbrainabacus19@gmail.com',
   },
 };
 

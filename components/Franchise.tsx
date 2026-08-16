@@ -93,7 +93,7 @@ export default function Franchise() {
                 Ready to Get Started?
               </h3>
               <p className="text-muted text-base leading-relaxed mb-8">
-                Franchises available in India, USA, UK, and Dubai. Limited slots open. Enquire today to reserve your territory.
+                Franchises available across India, USA, Dubai, UK, Germany, and Netherlands. Limited slots open. Enquire today to reserve your territory.
               </p>
 
               <div className="space-y-4">
@@ -119,7 +119,7 @@ export default function Franchise() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-white/10 flex justify-center gap-6 text-center">
-                {['4 Countries', 'Low Investment', '24h Response'].map((item) => (
+                {['6 Countries', 'Low Investment', '24h Response'].map((item) => (
                   <div key={item}>
                     <p className="text-teal text-xs font-semibold">{item}</p>
                   </div>

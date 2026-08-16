@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { MessageCircle, Mail, MapPin, Send } from 'lucide-react';
+import { MessageCircle, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { buildWhatsAppUrl, SITE_CONFIG } from '@/lib/config';
 
 const DEFAULT_MESSAGES: Record<string, string> = {
@@ -85,8 +85,10 @@ export default function ContactForm() {
               <select name="country" value={form.country} onChange={handleChange} className={inputClass}>
                 <option value="India">India</option>
                 <option value="USA">USA</option>
-                <option value="United Kingdom">United Kingdom</option>
                 <option value="Dubai">Dubai, UAE</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Germany">Germany</option>
+                <option value="Netherlands">Netherlands</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -125,6 +127,17 @@ export default function ContactForm() {
           <div className="space-y-5 md:pt-2">
             {[
               {
+                icon: Phone,
+                color: 'teal',
+                title: 'Phone',
+                content: (
+                  <div className="space-y-1">
+                    <a href="tel:+919629841966" className="block text-teal text-sm hover:text-gold transition-colors">+91 96298 41966</a>
+                    <a href="tel:+918220026412" className="block text-teal text-sm hover:text-gold transition-colors">+91 82200 26412</a>
+                  </div>
+                ),
+              },
+              {
                 icon: MessageCircle,
                 color: 'teal',
                 title: 'WhatsApp',
@@ -152,8 +165,8 @@ export default function ContactForm() {
                 title: 'Offline Centers',
                 content: (
                   <div>
-                    <p className="text-muted text-sm">Sulur, Tamil Nadu</p>
-                    <p className="text-muted text-sm">Karanam Pettai, Tamil Nadu</p>
+                    <p className="text-muted text-sm">Sulur · Airforce Station Sulur</p>
+                    <p className="text-muted text-sm">Kangayampalayam · Edappady · Lakshmi Nagar</p>
                   </div>
                 ),
               },
@@ -176,7 +189,7 @@ export default function ContactForm() {
 
             <div className="bg-navy/50 rounded-2xl p-5 border border-teal/20">
               <p className="text-muted text-sm leading-relaxed">
-                For franchise enquiries in <span className="text-text-primary">USA, UK, and Dubai</span> — select &quot;Franchise Opportunity&quot; above and we will connect you with our regional team.
+                For franchise enquiries in <span className="text-text-primary">USA, Dubai, UK, Germany, and Netherlands</span> — select &quot;Franchise Opportunity&quot; above and we will connect you with our regional team.
               </p>
             </div>
           </div>

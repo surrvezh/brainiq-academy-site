@@ -3,13 +3,18 @@ import { MapPin } from 'lucide-react';
 const COUNTRIES = [
   { flag: '🇮🇳', name: 'India', description: 'Nationwide presence with offline centers in Tamil Nadu.' },
   { flag: '🇺🇸', name: 'USA', description: 'Centers serving South Asian communities across the United States.' },
-  { flag: '🇬🇧', name: 'United Kingdom', description: 'Programs available across major UK cities.' },
   { flag: '🇦🇪', name: 'Dubai, UAE', description: 'Serving families in Dubai and across the UAE.' },
+  { flag: '🇬🇧', name: 'United Kingdom', description: 'Programs available across major UK cities.' },
+  { flag: '🇩🇪', name: 'Germany', description: 'Growing presence serving families across Germany.' },
+  { flag: '🇳🇱', name: 'Netherlands', description: 'Programs available for families in the Netherlands.' },
 ];
 
 const OFFLINE_CENTERS = [
   { name: 'Sulur', address: 'Sulur, Coimbatore District, Tamil Nadu, India' },
-  { name: 'Karanam Pettai', address: 'Karanam Pettai, Tamil Nadu, India' },
+  { name: 'Airforce Station Sulur', address: 'Airforce Station Sulur, Tamil Nadu, India' },
+  { name: 'Kangayampalayam', address: 'Kangayampalayam, Tamil Nadu, India' },
+  { name: 'Edappady', address: 'Edappady, Tamil Nadu, India' },
+  { name: 'Lakshmi Nagar', address: 'Lakshmi Nagar, Tamil Nadu, India' },
 ];
 
 export default function Locations() {
@@ -30,7 +35,7 @@ export default function Locations() {
         </div>
 
         {/* Country cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12" style={{ perspective: '1000px' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" style={{ perspective: '1000px' }}>
           {COUNTRIES.map((country, i) => (
             <a
               key={country.name}

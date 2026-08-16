@@ -68,38 +68,20 @@ export default function Hero() {
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto">
-        {/* 3D logo with pulse */}
+        {/* Full logo */}
         <div
           className="relative mb-8 animate-float"
-          style={{
-            filter: 'drop-shadow(0 0 30px rgba(201,168,76,0.5)) drop-shadow(0 0 60px rgba(29,184,166,0.3))',
-            animationDuration: '5s',
-          }}
+          style={{ animationDuration: '5s', filter: 'drop-shadow(0 0 40px rgba(201,168,76,0.35)) drop-shadow(0 0 80px rgba(29,184,166,0.2))' }}
         >
           <Image
-            src="/logo.png"
-            alt="BrainIQ Academy Logo"
-            width={140}
-            height={140}
-            className="w-28 h-28 md:w-36 md:h-36 object-contain"
+            src="/logo-full.png"
+            alt="BrainIQ Academy — Enrich the brain with abacus"
+            width={560}
+            height={315}
+            className="w-64 sm:w-80 md:w-[420px] lg:w-[500px] h-auto object-contain"
             priority
           />
         </div>
-
-        {/* 3D headline */}
-        <h1
-          className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-text-primary leading-tight mb-4"
-          style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.8)' }}
-        >
-          brain<span className="text-gold" style={{ textShadow: '0 0 30px rgba(201,168,76,0.6), 0 4px 20px rgba(0,0,0,0.5)' }}>IQ</span>
-          <br />
-          <span className="text-3xl md:text-4xl lg:text-5xl text-text-primary/80">Academy</span>
-        </h1>
-
-        <p className="text-teal text-base md:text-xl font-inter tracking-[0.3em] uppercase mb-4"
-          style={{ textShadow: '0 0 20px rgba(29,184,166,0.6)' }}>
-          Enrich the brain with abacus
-        </p>
 
         <p className="text-muted text-base md:text-lg max-w-xl mb-10 leading-relaxed">
           Unlock your child&apos;s full mental potential through the ancient art of abacus —
@@ -151,9 +133,9 @@ export default function Hero() {
         {/* Stats row */}
         <div className="mt-16 flex gap-8 md:gap-16">
           {[
-            { num: '500+', label: 'Students' },
-            { num: '4',    label: 'Countries' },
-            { num: '5+',   label: 'Years' },
+            { num: '10,000+', label: 'Students' },
+            { num: '6',       label: 'Countries' },
+            { num: '16+',     label: 'Years' },
           ].map(({ num, label }) => (
             <div key={label} className="text-center">
               <p className="font-playfair text-2xl md:text-3xl font-bold text-gold"

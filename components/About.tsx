@@ -18,26 +18,28 @@ export default function About() {
               About BrainIQ Academy
             </h2>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-4">
-              BrainIQ Academy is a globally recognized abacus training institution dedicated to unlocking
-              children&apos;s cognitive potential through structured, progressive programs. Founded with a
-              mission to make mental mathematics accessible to every child, we have built a community of
-              learners across India, USA, UK, and Dubai.
+              BrainIQ Academy is a trusted abacus training institution with over 16 years of dedicated
+              experience in shaping young minds. What began as a single classroom has grown into a movement
+              — today we have trained more than 10,000 students and carry our programs to six countries:
+              India, USA, Dubai, UK, Germany, and Netherlands.
             </p>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-4">
-              Our proven curriculum blends traditional abacus techniques with modern pedagogical methods,
-              enabling children aged 5 to 12 to develop lightning-fast mental arithmetic, enhanced memory,
-              and deep concentration skills.
+              Our curriculum bridges the ancient discipline of abacus with modern child psychology and
+              learning science, helping children aged 5 to 15 build lightning-fast mental arithmetic,
+              sharper memory, and lasting concentration — skills that extend far beyond the classroom into
+              academics and everyday life.
             </p>
             <p className="text-muted text-base md:text-lg leading-relaxed">
-              With offline centers in Sulur and Karanam Pettai, Tamil Nadu, and a growing international
-              presence, BrainIQ Academy is shaping the next generation of confident, capable learners.
+              Rooted in Tamil Nadu, our offline centers in Sulur, Airforce Station Sulur, Kangayampalayam,
+              Edappady, and Lakshmi Nagar serve students from diverse backgrounds — including children of
+              defence personnel — making quality abacus education accessible to every family.
             </p>
 
             <div className="mt-10 flex gap-8 md:gap-12">
               {[
-                { num: '500+', label: 'Students Trained' },
-                { num: '4',    label: 'Countries' },
-                { num: '5+',   label: 'Years Experience' },
+                { num: '10,000+', label: 'Students Trained' },
+                { num: '6',      label: 'Countries' },
+                { num: '16+',    label: 'Years Experience' },
               ].map(({ num, label }) => (
                 <div
                   key={label}

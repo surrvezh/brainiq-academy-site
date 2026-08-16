@@ -1,26 +1,26 @@
-import { CheckCircle } from 'lucide-react';
+import { GraduationCap, BookOpen } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/lib/config';
 
 const PROGRAMS = [
   {
-    badge: 'Beginner',
-    ageGroup: 'Age 5 – 7',
-    duration: '12 months',
-    skills: ['Basic abacus operation', 'Single-digit arithmetic', 'Number recognition', 'Fine motor development'],
+    badge: 'Junior',
+    name: 'Blooming Buds',
+    ageGroup: 'Age 5 – 9',
+    description: 'Our entry-level program for young learners joining abacus for the first time. Through play-based activities and guided exploration, children build number sense, fine motor skills, and a natural love for mathematics.',
     highlight: false,
   },
   {
     badge: 'Intermediate',
-    ageGroup: 'Age 8 – 11',
-    duration: '18 months',
-    skills: ['Multi-digit calculations', 'Mental arithmetic', 'Speed exercises', 'Concentration drills'],
+    name: 'Initial Grade',
+    ageGroup: 'Age 10 – 12',
+    description: 'A structured bridge program that transitions learners into formal abacus technique. Students develop a solid foundation in mental arithmetic, concentration, and the discipline needed for advanced levels.',
     highlight: true,
   },
   {
-    badge: 'Advanced',
-    ageGroup: 'Age 12+',
-    duration: '24 months',
-    skills: ['Complex mental math', 'Competition preparation', 'Visualization mastery', 'Exam strategies'],
+    badge: 'Senior',
+    name: 'Grade 1 – 8',
+    ageGroup: 'Age 12 – 15',
+    description: 'Eight progressive grades with increasing complexity. Students advance from core abacus operations through to high-speed mental calculation, preparing them for competitions and real-world academic excellence.',
     highlight: false,
   },
 ];
@@ -68,18 +68,11 @@ export default function Programs() {
                 >
                   {prog.badge}
                 </span>
-                <p className="text-text-primary font-playfair text-2xl font-bold">{prog.ageGroup}</p>
-                <p className="text-muted text-sm mt-1">Duration: {prog.duration}</p>
+                <p className="text-text-primary font-playfair text-2xl font-bold">{prog.name}</p>
+                <p className="text-muted text-sm mt-1">{prog.ageGroup}</p>
               </div>
 
-              <ul className="space-y-3 flex-1 mb-6">
-                {prog.skills.map((skill) => (
-                  <li key={skill} className="flex items-start gap-3">
-                    <CheckCircle size={16} className="text-teal mt-0.5 flex-shrink-0" />
-                    <span className="text-muted text-sm">{skill}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-muted text-sm leading-relaxed flex-1 mb-6">{prog.description}</p>
 
               <a
                 href="#contact"
@@ -92,6 +85,36 @@ export default function Programs() {
                 Enroll in {prog.badge}
               </a>
             </article>
+          ))}
+        </div>
+
+        {/* Teacher training & books */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {[
+            {
+              icon: GraduationCap,
+              title: 'Teacher Training',
+              body: 'We offer comprehensive abacus teacher training programs for educators and aspiring instructors — equipping them with the skills, methodology, and certification to run their own classes.',
+            },
+            {
+              icon: BookOpen,
+              title: 'Book Supply to Schools',
+              body: 'BrainIQ Academy supplies structured abacus workbooks and teaching materials to schools, enabling institutions to integrate our proven curriculum into their own learning environment.',
+            },
+          ].map(({ icon: Icon, title, body }) => (
+            <div
+              key={title}
+              className="flex items-start gap-4 bg-navy rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition-all duration-300"
+              style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
+            >
+              <div className="w-11 h-11 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0 border border-gold/20">
+                <Icon className="text-gold" size={20} />
+              </div>
+              <div>
+                <h3 className="text-text-primary font-semibold mb-1">{title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{body}</p>
+              </div>
+            </div>
           ))}
         </div>
 

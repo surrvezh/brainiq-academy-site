@@ -37,7 +37,7 @@ const QUICK_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-const LOCATIONS = ['🇮🇳 India', '🇺🇸 USA', '🇬🇧 United Kingdom', '🇦🇪 Dubai, UAE', '📍 Sulur, Tamil Nadu', '📍 Karanam Pettai, TN'];
+const LOCATIONS = ['🇮🇳 India', '🇺🇸 USA', '🇦🇪 Dubai, UAE', '🇬🇧 United Kingdom', '🇩🇪 Germany', '🇳🇱 Netherlands', '📍 Sulur, Tamil Nadu', '📍 Airforce Station Sulur', '📍 Kangayampalayam', '📍 Edappady', '📍 Lakshmi Nagar'];
 
 export default function Footer() {
   return (

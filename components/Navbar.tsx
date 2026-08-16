@@ -10,8 +10,8 @@ const NAV_LINKS = [
   { label: 'Programs', href: '#programs' },
   { label: 'Locations', href: '#locations' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Franchise', href: '#franchise' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Franchise', href: '#franchise' },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#hero" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10">
               <Image
                 src="/logo.png"
@@ -66,6 +66,7 @@ export default function Navbar() {
           </div>
 
           <button
+            type="button"
             className="md:hidden text-text-primary p-2 rounded-lg hover:bg-white/10 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
