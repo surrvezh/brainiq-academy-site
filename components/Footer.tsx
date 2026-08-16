@@ -49,14 +49,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="relative w-10 h-10">
-                <Image src="/logo.png" alt="BrainIQ Academy" fill className="object-contain" />
-              </div>
-              <span className="font-playfair text-xl font-bold text-text-primary">
-                brain<span className="text-gold">IQ</span>
-              </span>
-            </div>
+            <a href="#hero" className="inline-block mb-4">
+              <Image src="/logo-full.png" alt="BrainIQ Academy" width={200} height={113} className="h-16 w-auto object-contain" />
+            </a>
             <p className="text-muted text-sm leading-relaxed mb-6">
               {SITE_CONFIG.tagline}.<br />
               Empowering children through the ancient art of abacus.

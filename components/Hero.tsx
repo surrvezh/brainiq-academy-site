@@ -83,13 +83,28 @@ export default function Hero() {
           />
         </div>
 
-        <p className="text-muted text-base md:text-lg max-w-xl mb-10 leading-relaxed">
+        <p className="text-muted text-base md:text-lg max-w-xl mb-8 leading-relaxed">
           Unlock your child&apos;s full mental potential through the ancient art of abacus —
           building speed, focus, and lifelong confidence.
         </p>
 
+        {/* Stats row — moved above CTAs */}
+        <div className="mb-10 flex gap-8 md:gap-16">
+          {[
+            { num: '10,000+', label: 'Students' },
+            { num: '6',       label: 'Countries' },
+            { num: '16+',     label: 'Years' },
+          ].map(({ num, label }) => (
+            <div key={label} className="text-center">
+              <p className="font-playfair text-2xl md:text-3xl font-bold text-gold"
+                style={{ textShadow: '0 0 20px rgba(201,168,76,0.4)' }}>{num}</p>
+              <p className="text-muted text-xs md:text-sm mt-1 uppercase tracking-widest">{label}</p>
+            </div>
+          ))}
+        </div>
+
         {/* 3D CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
             href="#contact"
             className="px-10 py-4 bg-gold text-navy font-bold text-base rounded-full transition-all duration-300"
@@ -109,40 +124,11 @@ export default function Hero() {
             Enroll Now
           </a>
           <a
-            href="#contact"
-            className="px-10 py-4 border-2 border-teal text-teal font-bold text-base rounded-full transition-all duration-300"
-            style={{
-              boxShadow: '0 8px 32px rgba(29,184,166,0.2)',
-              transform: 'translateZ(0)',
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = 'perspective(600px) rotateX(-8deg) translateY(-4px) translateZ(8px)';
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 16px 40px rgba(29,184,166,0.4)';
-              (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(29,184,166,0.1)';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = 'translateZ(0)';
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 8px 32px rgba(29,184,166,0.2)';
-              (e.currentTarget as HTMLAnchorElement).style.background = '';
-            }}
+            href="#franchise"
+            className="text-muted text-sm hover:text-teal transition-colors underline underline-offset-4"
           >
-            Franchise Enquiry
+            Interested in a franchise? →
           </a>
-        </div>
-
-        {/* Stats row */}
-        <div className="mt-16 flex gap-8 md:gap-16">
-          {[
-            { num: '10,000+', label: 'Students' },
-            { num: '6',       label: 'Countries' },
-            { num: '16+',     label: 'Years' },
-          ].map(({ num, label }) => (
-            <div key={label} className="text-center">
-              <p className="font-playfair text-2xl md:text-3xl font-bold text-gold"
-                style={{ textShadow: '0 0 20px rgba(201,168,76,0.4)' }}>{num}</p>
-              <p className="text-muted text-xs md:text-sm mt-1 uppercase tracking-widest">{label}</p>
-            </div>
-          ))}
         </div>
       </div>
 

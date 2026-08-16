@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Benefits from '@/components/Benefits';
 import Programs from '@/components/Programs';
+import Testimonials from '@/components/Testimonials';
 import Locations from '@/components/Locations';
 import Gallery from '@/components/Gallery';
 import Franchise from '@/components/Franchise';
@@ -22,12 +23,14 @@ export default function Home() {
       <SectionDivider from="navy" to="card" />
       <Programs />
       <SectionDivider from="card" to="navy" flip />
+      <Testimonials />
+      <SectionDivider from="navy" to="card" />
       <Locations />
-      <SectionDivider from="navy" to="card" />
-      <Gallery />
       <SectionDivider from="card" to="navy" flip />
-      <ContactForm />
+      <Gallery />
       <SectionDivider from="navy" to="card" />
+      <ContactForm />
+      <SectionDivider from="card" to="navy" flip />
       <Franchise />
       <Footer />
     </main>
